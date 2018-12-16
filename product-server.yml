@@ -1,0 +1,14 @@
+spring:
+  zipkin:
+    base-url: http://192.168.58.138:9411
+  application:
+    name: product-service
+server:
+  port: 8771
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+product-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
